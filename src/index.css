@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+.header-container{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid gray;
+}
+
+.header-container > button {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border: 1px solid black;
+    border-radius: 9px;
+    transition: background-color .8s;
+}
+.header-container > button:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+.header-container > button:active{
+    transform: scale(.9);
+}
+.header-container > button:last-child {
+    margin-left: 7rem;
+}
+
+.main{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.card{
+    position: relative;
+    margin: 10px 20px;
+    width: 320px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.card > span {
+    cursor: pointer;
+    position: absolute;
+    top: .537rem;
+    right: .735rem;
+    font-size: 1.3rem;
+}
+.card > span:active{
+    transform: scale(.9);
+}
+.instruction-container{
+    padding: 1rem .5rem;
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid gray;
+}
+
+.instruction-container > p {
+    font-size: 1.375rem;
+    font-weight: 450;
+}
+
+.instruction-container > p > span {
+    font-weight: 900;
+}
+
+.footer-container{
+    padding: .8rem 2rem;
+    grid-column: 1 / 2;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid gray;
+}
+
